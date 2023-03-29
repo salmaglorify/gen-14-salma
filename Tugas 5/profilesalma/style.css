@@ -1,0 +1,406 @@
+/* atur tulisan pada navbar */
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 20px;
+    font-size: 15px;
+}
+
+/* warna bg */
+html {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+/* menghapus jeda kosong antara tepian layar dan tepi video */
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* geser margin */
+.layar-dalam {
+    width: 1000px;
+    margin: auto;
+}
+.layar-penuh {
+    width: 100%;
+}
+
+/* pindah menu jd center, listnya warna putih, ada border bawah */
+nav {
+    z-index: 100;
+    color: #fff;
+    text-align: center;
+    position: fixed;
+    border-bottom: 1px solid #b1b1b1;
+    line-height: 60px;
+    width: 100%;
+    transition: background-color 0.5s ease;
+}
+/* pindah Salma's profile ke kiri  */
+nav .profile {
+    float: left;
+    height: 60px;
+    max-width: 600px;
+    line-height: 60px;
+    font-size: 20px;
+    font-style: italic;
+    margin-left: 40px;
+}
+
+/* pindah menu ke kanan */
+nav .menu {
+    float: right;
+    height: 60px;
+    max-width: 600px;
+}
+
+/* menu list jd horizontal */
+nav .menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+nav .menu ul li {
+    list-style-type: none;
+    float: left;
+    line-height: 60px;
+}
+
+/* ganti warna menu, atur jarak, hapus underline */
+nav ul li a {
+    color: #fff;
+    text-align: center;
+    padding: 0px 16px 0px 16px;
+    text-decoration: none;
+}
+
+/* memunculkan underline saat cursor di sekitar menu */
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* pengaturan header */
+/* menghilangkan scroll akibat videonya widthnya kelebaran*/
+header {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    z-index: 2;
+}
+header video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    z-index: -2;
+}
+
+/* agar text berapa di atas video */
+header .intro {
+    z-index: 100;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    top: 50%;
+}
+
+/* memperbesar font */
+header .intro h3 {
+    font-size: 50px;
+    margin: 0;
+    padding: 0;
+}
+
+/* bikin overlay biar tulisan header kelihatan */
+header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    opacity: 50%;
+    z-index: -1;
+}
+
+/* tombol menu garis 3 */
+.tombol-menu {
+    position: absolute;
+    top: 1.7rem;
+    right: 1rem;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+}
+.tombol-menu .garis {
+    height: 3px;
+    background-color: #fff;
+}
+
+/* saat discroll h3 tdk nabrak menu, dijadikan bg putih */
+nav.putih {
+    background-color: #fff;
+}
+
+/* ubah nav warna hitam saat background nya putih */
+nav.putih .tombol-menu .garis {
+    background-color: #333;
+}
+nav.putih .profile{
+    color: #333;
+}
+nav.putih ul li a {
+    color: #333;
+}
+
+/* jarak 'about me' dg tepi video */
+section {
+    padding: 50px 0px 50px 0px;
+}
+section h3 {
+    font-size: 30px;
+}
+
+/* tag bayangan garis merah */
+section h3::after {
+    content: "";
+    border-bottom: 5px solid #c86b85;
+    width: 52px;
+    display: block;
+    margin: 20px auto;
+}
+
+/* align semua text ke tengah */
+#aboutme, #interest, #blog {
+    text-align: center;
+}
+
+/* tulisan di bawah about me */
+section p.ringkasan {
+    font-style: italic;
+    font-size: 18px;
+    color: #ababab;
+}
+
+/* semua div jadi 1 horizontal */
+.konten-isi, .interest, .blog {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+/* bagian aboutme */
+.konten-isi .area {
+    width: 80%;
+    box-shadow: 0px -10px 30px #ccc;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+/* membagi 2 bagian: foto dan text */
+.konten-isi div.area div {
+    width: 500%;
+}
+.konten-isi .area .gambar {
+    border-radius: 5px 0px 0px 5px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    height: 400px;
+}
+.konten-isi .area .text {
+    width: auto;
+    padding: 40px;
+}
+
+/* bagian interest */
+section.abuabu {
+    background-color: #f5f6f6;
+}
+.interest h6 {
+    margin: 0px;
+    margin-top: 20px;
+    padding: 0px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.interest img {
+    width: 50px;
+}
+.interest div {
+    text-align: center;
+    width: 26%;
+}
+
+/* bagian gallery dijadikan 1 baris*/
+section#gallery {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    overflow: hidden;
+    padding: 10px 0px 10px 0px;
+}
+/* jarak antar foto */
+section#gallery div {
+    padding: 10px;
+}
+/* ukuran foto */
+section#gallery div img {
+    height: 160px;
+    border-radius: 5px;
+}
+section#gallery div img:hover {
+    transition: all 0.2s ease-in-out;
+    transform: scale(1.3);
+}
+
+/* bagian quote */
+section.quote {
+    background: url('asset/sunset.jpg');
+    background-attachment: local;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    font-style: italic;
+    padding: 100px;
+}
+section.quote .layar-dalam p {
+    display: inline;
+    background: url('asset/quote-icon.png') no-repeat;
+    padding: 40px;
+}
+
+/* bagian article */
+.blog .area {
+    width: 47%;
+    box-shadow: 0px -10px 30px #ccc;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.blog .area .gambar {
+    border-radius: 5px 0px 0px 5px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    background-position: top;
+}
+.blog .area .text article {
+    padding: 40px;
+}
+.blog .area .text article h4 {
+    margin: 0px;
+}
+.blog .area .text article a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.5s ease;
+}
+.blog .area .text article a:hover {
+    color: #ccc;
+}
+
+/* contact */
+footer {
+    padding: 50px 0px 50px 0px;
+    background-color: #343a40;
+    color: #fff;
+}
+footer .layar-dalam div {
+    padding: 40px;
+}
+footer .layar-dalam h5 {
+    margin-top: 0px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* bagian copyright */
+footer .layar-dalam .copyright {
+    width: auto;
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 1px solid #666;
+    text-align: center;
+}
+
+/* responsive saat layar diminimize, display menu tdk terpotong */
+@media screen and (max-width: 991.98px) {
+    .layar-dalam {
+        width: 100%;
+    }
+
+    /* tampilan menu jd di bawah border saat di klik */
+    nav .menu ul {
+        display: none;
+        margin-top: 60px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    /* bikin background buat list menu ke bawah */
+    nav .menu ul li {
+        width: 100%;
+        border-bottom: 1px solid #ccc;
+        background-color: #fff;
+        line-height: 40px;
+    }
+    /* tulisan 'menu ke bawah' kelihatan krn ganti warna */
+    nav .menu ul li a {
+        color: #333;
+    }
+    /* supaya garis 3 terdisplay */
+    .tombol-menu {
+        display: flex;
+    }
+
+    /* pd aboutme, text dipindah ke bawah agar tdk sempit */
+    .konten-isi .area {
+        display: block;
+    }
+    .konten-isi div.area div {
+        width: 100%;
+    }
+
+    /* atur corner foto pd aboutme*/
+    .konten-isi .area .gambar {
+        border-radius: 5px 5px 0px 0px;
+        height: 400px;
+    }
+
+    /* pd artikel, text dipindah ke bawah agar tdk sempit */
+    .blog .area {
+        display: block;
+    }
+    .blog div.area div {
+        width: 100%;
+    }
+
+    /* atur corner foto pd artikel*/
+    .blog .area .gambar {
+        border-radius: 5px 5px 0px 0px;
+        height: 200px;
+    }
+
+    /* bagian interest dijadikan vertikal agar tdk sempit */
+    .interest {
+        display: block;
+    }
+    .interest div {
+        width: auto;
+        padding: 40px;
+        padding-bottom: 30px;
+    }
+}
