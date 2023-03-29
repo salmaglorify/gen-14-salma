@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Ajax Customer</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<!-- <link th:href="@{/css/main.css}" rel="stylesheet"> -->
+
+<!-- jQuery Modal -->
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+<script type="text/javascript" src="/js/actions.js"></script>
+
+</head>
+<body>
+<main class="table">
+		<section class="table__header">
+			<h2>Customer Manager</h2>
+		</section>
+		<p>
+			<a href="#add" rel="modal:open" class="button">Add New Company</a>
+		</p>
+		<section class="table__body">
+			<table border="1" cellspacing="0" cellpadding="5">
+				<tr>
+					<th>Id</th>
+					<th>Name</th>
+					<th>Email</th>
+					<th>Address</th>
+					<th>Actions</th>
+				</tr>
+			</table>
+		</section>
+	</main>
+	<form id="add" action="#" class="add_form modal" style="display: none;">
+		<div id='msg'>
+			<h3>Add a New Company</h3>
+			<p>
+				<label>Name</label> <input type="text" id="name" name="name"><br>
+				<label>Email</label> <input type="text" id="email" name="email"><br>
+				<label>Address</label> <input type="text" id="address"	name="address"><br>
+			</p>
+			<p>
+				<input type="submit" id="addNew" value="Submit" class="button">
+			</p>
+		</div>
+	</form>
+</body>
+</html>
