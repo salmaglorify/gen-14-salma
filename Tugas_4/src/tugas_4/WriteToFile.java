@@ -34,7 +34,9 @@ public class WriteToFile {
 		daftarBarang[3] = b4;
 		
 		for (int i=0; i<daftarBarang.length; i++) {
-			String outputText = "Barang = "+daftarBarang[i].getNama()+", Harga = "+daftarBarang[i].getHarga()+", Persediaan = "+daftarBarang[i].getPersediaan();
+			String outputText = "Barang = "+daftarBarang[i].getNama()+
+								", Harga = "+daftarBarang[i].getHarga()+
+								", Persediaan = "+daftarBarang[i].getPersediaan();
 			
 			saveTofile("Barang.txt", outputText, true);
 		}
