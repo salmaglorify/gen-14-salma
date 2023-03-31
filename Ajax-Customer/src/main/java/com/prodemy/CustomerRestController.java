@@ -20,24 +20,24 @@ public class CustomerRestController {
 	@Autowired
 	private CustomerService customerService;
 
-	@GetMapping("/companyList")
-	public ResponseEntity<List<Customer>> getCompanyList() {
+	@GetMapping("/customerList")
+	public ResponseEntity<List<Customer>> getCustomerList() {
 		return new ResponseEntity<List<Customer>>(customerService.listAll(), HttpStatus.OK);
 	}
 
-	@PostMapping("/company/{id}")
-	public ResponseEntity<Customer> getCompany(@PathVariable Long id) {
+	@PostMapping("/customer/{id}")
+	public ResponseEntity<Customer> getCustomer(@PathVariable Long id) {
 		return new ResponseEntity<Customer>(customerService.get(id), HttpStatus.OK);
 	}
 
-	@PostMapping("/company/save")
-	public ResponseEntity<Void> saveOrUpdateCompany(@RequestBody Customer customer) {
+	@PostMapping("/customer/save")
+	public ResponseEntity<Void> saveOrUpdateCustomer(@RequestBody Customer customer) {
 		customerService.save(customer);
 		return new ResponseEntity<Void>(HttpStatus.OK);
 	}
 
-	@DeleteMapping("/company/delete/{id}")
-	public ResponseEntity<Void> deleteCompany(@PathVariable Long id) {
+	@DeleteMapping("/customer/delete/{id}")
+	public ResponseEntity<Void> deleteCustomer(@PathVariable Long id) {
 		customerService.delete(id);
 		return new ResponseEntity<Void>(HttpStatus.OK);
 	}
