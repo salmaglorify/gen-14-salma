@@ -1,0 +1,7 @@
+com\ajax\crud\SpringBootAjaxCrudApplication.class
+com\ajax\crud\service\CrudService.class
+com\ajax\crud\config\DbConfig.class
+com\ajax\crud\rest\controller\CrudRestController.class
+com\ajax\crud\repository\CrudRepository.class
+com\ajax\crud\entity\Company.class
+com\ajax\crud\rest\controller\CrudController.class

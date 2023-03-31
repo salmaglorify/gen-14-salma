@@ -1,0 +1,5 @@
+com\prodemy\customer\CustomerRepository.class
+com\prodemy\customer\CustomerController.class
+com\prodemy\customer\Customer.class
+com\prodemy\customer\CustomerService.class
+com\prodemy\customer\ThymeleafCustomerManagerApplication.class
