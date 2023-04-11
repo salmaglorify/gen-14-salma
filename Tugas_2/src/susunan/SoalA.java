@@ -10,10 +10,7 @@ import java.util.Scanner;
  *
  */
 public class SoalA {
-
-	/**
-	 * @param args
-	 */
+	
 	public static void main(String[] args) {
 			
 		int i,j;
