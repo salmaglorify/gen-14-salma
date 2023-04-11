@@ -46,10 +46,8 @@ public class ArrayLuas {
 		for (int i=0; i<bidangDatar.length; i++) {
 			System.out.println("Nama:"+bidangDatar[i]+" -> keliling:"+keliling[i]+" -> luas:"+luas[i]);
 				}
-		
-		
 			
-	}
+		}
 
 	}
 
